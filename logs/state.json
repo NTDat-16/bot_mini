@@ -1,0 +1,186 @@
+{
+  "articles": {
+    "OptiSigns_Digital_Signage_App_for_Zoom_Adding_Using_and_Removing_the_App.md": {
+      "hash": "f3182ab92503ed79ebf09afd14325e1364d61193776a5ec827e50785fc5d293e",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/52523606879251-OptiSigns-Digital-Signage-App-for-Zoom-Adding-Using-and-Removing-the-App",
+      "updated_at": "2026-06-11T22:24:43Z",
+      "vector_file_id": "file-FR5kNp6ZYrL4uAV9oJMgyq"
+    },
+    "Connect_Google_Meet_Hardware_to_OptiSigns_Digital_Signage.md": {
+      "hash": "e6184a97b051d1eafbeb41f0fbc78082e9659e333a0e66f4e206f0aee0f33e2d",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/52412502456083-Connect-Google-Meet-Hardware-to-OptiSigns-Digital-Signage",
+      "updated_at": "2026-06-15T19:14:07Z",
+      "vector_file_id": "file-TQPJXN2L8UUgmfXDH4D1WC"
+    },
+    "Connect_Microsoft_Teams_Rooms_to_OptiSigns_Digital_Signage.md": {
+      "hash": "e3c21eed22dfc07175b33b2372d6a017ed4b6a82813702c434819240031485bf",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/52350277262483-Connect-Microsoft-Teams-Rooms-to-OptiSigns-Digital-Signage",
+      "updated_at": "2026-06-24T18:39:16Z",
+      "vector_file_id": "file-6naSoR4Nq5KDftMTnXVseX"
+    },
+    "Room_Integrations_Turn_Your_Meeting_Rooms_into_Digital_Signage.md": {
+      "hash": "11fb87d2f25d8041ee9f23b5a2a9e75b6ba34c08e3cdf5c0dc8d0659bde8392e",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/52113036672403-Room-Integrations-Turn-Your-Meeting-Rooms-into-Digital-Signage",
+      "updated_at": "2026-06-15T19:14:16Z",
+      "vector_file_id": "file-4v9n9SuQN8bLFKko1ct6u4"
+    },
+    "Connect_Zoom_Rooms_to_OptiSigns_Digital_Signage.md": {
+      "hash": "2038027fd692f8f174d80de9f1fd78dd952e6451d6da09649afb215bdcb60b41",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/52069065128723-Connect-Zoom-Rooms-to-OptiSigns-Digital-Signage",
+      "updated_at": "2026-06-11T22:22:00Z",
+      "vector_file_id": "file-9b7kGDDyMtQTLVndybMEyQ"
+    },
+    "Connect_Cisco_Webex_Rooms_to_OptiSigns_Digital_Signage.md": {
+      "hash": "e2c8bd7b8b1cbfda92272ea536db320a0a60a4f7815cf4e87946e18906115fc2",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/51343184586643-Connect-Cisco-Webex-Rooms-to-OptiSigns-Digital-Signage",
+      "updated_at": "2026-06-15T19:13:59Z",
+      "vector_file_id": "file-Hur1knYkXwHpsJHcuW1DWc"
+    },
+    "ChromeOS_PWA_Instructions.md": {
+      "hash": "1f9d5d8205579916f28d3945da4d0598363016f9c2e1e6533a04ae2775676117",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/49039295567891-ChromeOS-PWA-Instructions",
+      "updated_at": "2026-05-05T15:48:27Z",
+      "vector_file_id": "file-MJR31UC3BaWaz87m5zpM9Y"
+    },
+    "How_to_Use_the_Google_Ads_Dashboard_App.md": {
+      "hash": "a9cbcccd3bc7b110ae541fe5c636d4870c5da298dc3d24cf4ab756ab3b45c059",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/48751096814995-How-to-Use-the-Google-Ads-Dashboard-App",
+      "updated_at": "2026-02-02T17:54:16Z",
+      "vector_file_id": "file-2mhMcnUj4LWSf37EfKVfxU"
+    },
+    "How_to_Use_the_Google_Search_Console_App.md": {
+      "hash": "beef527c782378ab5f27bbcf99e33aac80cc7d2169d128926a5cd982381abae1",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/48656950622227-How-to-Use-the-Google-Search-Console-App",
+      "updated_at": "2026-02-02T17:56:42Z",
+      "vector_file_id": "file-TdT7XP7wWXC6ECuPXKsPhR"
+    },
+    "How_to_Use_the_YouTube_Dashboard_App.md": {
+      "hash": "743d45749f77fbd7db94f11b2ffb36b79f9954c824dc0c136203f31f7138f91f",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/48626115821459-How-to-Use-the-YouTube-Dashboard-App",
+      "updated_at": "2026-02-02T15:32:55Z",
+      "vector_file_id": "file-1erz4S7Dj8NEhkVhvrLiSH"
+    },
+    "Operational_Schedule_Troubleshooting.md": {
+      "hash": "0aa8a1582450a89a578e93ecc0ad2928374beafd07a113e2a90d6cce510babc9",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/48241081473043-Operational-Schedule-Troubleshooting",
+      "updated_at": "2026-04-20T21:26:17Z",
+      "vector_file_id": "file-EuDNsgX1uM3sf2XvUHCrsm"
+    },
+    "How_to_Use_the_OptiDev_App.md": {
+      "hash": "c1665d46ecf2ea9d2f384393705b95d3c124d7ed6027bac671ba3946895c8425",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/47616485609491-How-to-Use-the-OptiDev-App",
+      "updated_at": "2026-02-11T23:03:49Z",
+      "vector_file_id": "file-2NkhDa52TLjb9Rm6Up7Z4o"
+    },
+    "How_to_Set_Up_an_Outlook_Calendar_App_with_Shared_Permissions.md": {
+      "hash": "a7ba2befe1a1ddc6481c2af984c542b5b95f2f0b6f906bea150d07a95b8eddd0",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/45619214182803-How-to-Set-Up-an-Outlook-Calendar-App-with-Shared-Permissions",
+      "updated_at": "2025-10-17T16:01:18Z",
+      "vector_file_id": "file-PdKzfurDt7zfsS5eAjdv6d"
+    },
+    "Using_an_Enterprise_Network_802.1x_with_OptiSigns.md": {
+      "hash": "02a7056f46b024730d4590e888868eaf0df31aaf243dab68158c1a9fc7368a08",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/44890229616403-Using-an-Enterprise-Network-802-1x-with-OptiSigns",
+      "updated_at": "2026-05-20T18:11:11Z",
+      "vector_file_id": "file-XUQTV3H4Vq4TmwE9uPxpDk"
+    },
+    "User_Management_Example_-_Chain_Restaurant_or_Retail_Store_with_Multiple_Locations.md": {
+      "hash": "5f4259a8576a8340882c680c9eb6b144c47e8498ae2cb4ec08b4f27b32220d41",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/43657735780627-User-Management-Example-Chain-Restaurant-or-Retail-Store-with-Multiple-Locations",
+      "updated_at": "2025-08-28T19:28:55Z",
+      "vector_file_id": "file-ELQx5vonMu1tXyTFEpxAre"
+    },
+    "Getting_Started_with_Designer.md": {
+      "hash": "e0d95ad6466c213537cd905168c0ccd8bb128f5dbc3d20589e33a6766940ec4c",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/42087942047379-Getting-Started-with-Designer",
+      "updated_at": "2025-10-07T17:18:32Z",
+      "vector_file_id": "file-89THYndqHXxpkEs4UNgRJD"
+    },
+    "Designer_2.0_New_Features.md": {
+      "hash": "09c26c3b3ad4de075c6ccdf78b3a7f8bb4061b2050a58eba27ecc312f206c397",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/41432385864595-Designer-2-0-New-Features",
+      "updated_at": "2026-05-12T14:17:09Z",
+      "vector_file_id": "file-V8YAUPLD73QfHuJAftUYGp"
+    },
+    "OptiSigns_ProProMax_Player_Troubleshooting_Guide.md": {
+      "hash": "ec1243b74fd3ddb1565bc91059ca8dd16ed630871353bffb335b31397b6173ae",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/40736654972563-OptiSigns-Pro-ProMax-Player-Troubleshooting-Guide",
+      "updated_at": "2026-01-13T21:20:16Z",
+      "vector_file_id": "file-284PYUMW98eBbPfdYRTgpF"
+    },
+    "How_to_Play_Licensed_Background_Music_on_Digital_Signs_with_OptiSound.md": {
+      "hash": "fb9420edc0178aaf900e3101999097bae08ce6e579072dc9d6506d747b0d5920",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/40671590645651-How-to-Play-Licensed-Background-Music-on-Digital-Signs-with-OptiSound",
+      "updated_at": "2026-04-08T22:33:37Z",
+      "vector_file_id": "file-PZptEjKmvLGyyxkZTdYH39"
+    },
+    "Disk_Encryption.md": {
+      "hash": "f47b6fa19b8062a47b72e705e4bb4e9fe01632203d7e3a8caa3a0435a2f0cd20",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/40212027797523-Disk-Encryption",
+      "updated_at": "2025-09-04T16:19:23Z",
+      "vector_file_id": "file-Vucjm7RrZXeucFaTMkCqCk"
+    },
+    "OptiStick_Troubleshooting_Guide.md": {
+      "hash": "b76b8d0df8ed882a8ba3f9b47059109d957a7cef5112afe21ab7bfd0b6eb570d",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/40147900639891-OptiStick-Troubleshooting-Guide",
+      "updated_at": "2026-06-26T13:52:36Z",
+      "vector_file_id": "file-GLzCWuYYJcBdwE2pRhJW7b"
+    },
+    "Fixing_Unexpected_Screen_Rotation_Incorrect_Orientation_with_OptiSigns_Android_Stick.md": {
+      "hash": "7fd9bbd1e733f197fffaf87657dbf2676cd31fca7f2a78982795d67e559a3dce",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/39488874989587-Fixing-Unexpected-Screen-Rotation-Incorrect-Orientation-with-OptiSigns-Android-Stick",
+      "updated_at": "2025-09-04T15:25:54Z",
+      "vector_file_id": "file-ATyMFiYuuQqM7nK5Apgin1"
+    },
+    "How_to_Use_the_Tableau_App.md": {
+      "hash": "0e9258a2ba6243de6784461f91bf237636bf91842e925f4943f6a9125f5e6d4d",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/39250660729747-How-to-Use-the-Tableau-App",
+      "updated_at": "2026-01-06T22:36:49Z",
+      "vector_file_id": "file-6949UkzVrnRZ6HXYPXLyu1"
+    },
+    "Handle_OAuth_Authentication_using_API_Gateway_Pre-request_Configuration.md": {
+      "hash": "159cd0eb5794f3e0d6d746e7db7ca022ddd80d95e279854076a4a5e898fa8b33",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/39080869746067-Handle-OAuth-Authentication-using-API-Gateway-Pre-request-Configuration",
+      "updated_at": "2025-08-28T18:42:06Z",
+      "vector_file_id": "file-25toMwnh3e72kcJgzy3Y8T"
+    },
+    "Tagging_in_OptiSigns.md": {
+      "hash": "16c65f29a2e2d46b79aeaeecfd3c626e2b74a80417be9f955923a64b8e3482ad",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/38062664690195-Tagging-in-OptiSigns",
+      "updated_at": "2025-09-09T19:34:07Z",
+      "vector_file_id": "file-AZBEmD3c9gNMesBBRUDjnd"
+    },
+    "Getting_Started_with_an_OptiSigns_Free_Trial.md": {
+      "hash": "551efcfa7f6aa1ff9cb3f69bb25b4560558e5f0b86450d3a8cbaa669c49efc54",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/37966066335891-Getting-Started-with-an-OptiSigns-Free-Trial",
+      "updated_at": "2025-09-04T18:44:24Z",
+      "vector_file_id": "file-GhEW5JxQ2gDdGCGG8aPPwb"
+    },
+    "How_to_Use_OptiSigns_with_Microsoft_Teams_Rooms.md": {
+      "hash": "71d32ac83f09d9e39ff5b7e7cb8d7bd41adc3b0854d13c47d846bc53bc72d474",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/36911639377683-How-to-Use-OptiSigns-with-Microsoft-Teams-Rooms",
+      "updated_at": "2025-09-04T18:42:32Z",
+      "vector_file_id": "file-5wL6eZkxjKXziKYYRqv4v7"
+    },
+    "How_to_access_the_Troubleshooting_page_of_the_OptiSigns_Player.md": {
+      "hash": "04dbb82ea9a51a24269625ce71f8a38327a805c8e6ea595bd7e96c487bf5b2ad",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/36501302096915-How-to-access-the-Troubleshooting-page-of-the-OptiSigns-Player",
+      "updated_at": "2025-09-02T20:08:24Z",
+      "vector_file_id": "file-AUrbmdYf9vxRZJAgQM5JNw"
+    },
+    "How_to_Using_SEPA_and_iDEAL_for_EUR_Currency_Subscription_Payments.md": {
+      "hash": "de245cc5c72484cbe8bab321617f319ab5dd89bd2ade2098727a8a44c76992ab",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/35749502945555-How-to-Using-SEPA-and-iDEAL-for-EUR-Currency-Subscription-Payments",
+      "updated_at": "2025-08-29T16:58:30Z",
+      "vector_file_id": "file-WUjBMgjUwVe2VpW2gTgtpE"
+    },
+    "How_to_Install_a_Root_Certificate_and_Display_an_Internal_Website_on_Screens.md": {
+      "hash": "36efb79c8744459dc93c65e66ea343b7b85f7d7a0e43b76205fb470a1a2202a5",
+      "article_url": "https://support.optisigns.com/hc/en-us/articles/35184720136595-How-to-Install-a-Root-Certificate-and-Display-an-Internal-Website-on-Screens",
+      "updated_at": "2025-09-04T16:54:34Z",
+      "vector_file_id": "file-YXCNqk6vQztYk3kDoR9U8R"
+    }
+  },
+  "assistant_id": "asst_GPLAbl2mp225oBY2IUdvEFcI",
+  "vector_store_id": "vs_6a4518f460048191aecedc2d0a61d806"
+}
