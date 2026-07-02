@@ -4,21 +4,22 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
-DOCS_DIR = Path(__file__).resolve().parent / "docs"
-ASSISTANT_NAME = "OptiBot Mini Clone"
-SYSTEM_PROMPT = """You are OptiBot, the customer-support bot for OptiSigns.com.
-• Tone: helpful, factual, concise.
-• Only answer using the uploaded docs.
-• Max 5 bullet points; else link to the doc.
-• Cite up to 3 "Article URL:" lines per reply."""
+from bot_mini.constants import (
+    ASSISTANT_NAME,
+    DOCS_DIR,
+    OPENAI_ASSISTANT_ID_ENV,
+    OPENAI_API_KEY_ENV,
+    OPENAI_VECTOR_STORE_ID_ENV,
+    SYSTEM_PROMPT,
+)
 
 
 def get_client():
     load_dotenv()
 
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv(OPENAI_API_KEY_ENV)
     if not api_key:
-        raise RuntimeError("Missing OPENAI_API_KEY in environment or .env file")
+        raise RuntimeError(f"Missing {OPENAI_API_KEY_ENV} in environment or .env file")
 
     return OpenAI(api_key=api_key)
 
@@ -32,7 +33,7 @@ def list_markdown_files(docs_dir=DOCS_DIR):
 
 
 def get_or_create_vector_store(client, vector_store_id=None, name="OptiSigns Docs"):
-    vector_store_id = vector_store_id or os.getenv("OPENAI_VECTOR_STORE_ID")
+    vector_store_id = vector_store_id or os.getenv(OPENAI_VECTOR_STORE_ID_ENV)
     if vector_store_id:
         return client.vector_stores.retrieve(vector_store_id)
 
@@ -95,7 +96,7 @@ def upload_all(docs_dir=DOCS_DIR, vector_store_id=None, vector_store_name="OptiS
 
 def create_or_update_assistant(vector_store_id, model="gpt-4.1-mini", assistant_id=None):
     client = get_client()
-    assistant_id = assistant_id or os.getenv("OPENAI_ASSISTANT_ID")
+    assistant_id = assistant_id or os.getenv(OPENAI_ASSISTANT_ID_ENV)
     payload = {
         "name": ASSISTANT_NAME,
         "instructions": SYSTEM_PROMPT,

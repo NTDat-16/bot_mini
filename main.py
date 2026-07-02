@@ -4,25 +4,23 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from markdown_converter import (
-    DOCS_DIR,
-    html_to_markdown,
-    save_markdown,
-)
-from scraper import fetch_articles, get_article_links, scrape_article
-from uploader import (
+import openai
+from bot_mini.markdown_converter import html_to_markdown, save_markdown
+from bot_mini.scraper import fetch_articles, get_article_links, scrape_article
+from bot_mini.uploader import (
     get_client,
     get_or_create_vector_store,
     upload_all,
     upload_files,
     create_or_update_assistant,
-    SYSTEM_PROMPT,
 )
+from bot_mini import constants
 
-BASE_DIR = Path(__file__).resolve().parent
-LOGS_DIR = BASE_DIR / "logs"
-STATE_PATH = LOGS_DIR / "state.json"
-LAST_RUN_PATH = LOGS_DIR / "last_run.json"
+DOCS_DIR = constants.DOCS_DIR
+STATE_PATH = constants.STATE_PATH
+LAST_RUN_PATH = constants.LAST_RUN_PATH
+LOGS_DIR = constants.LOGS_DIR
+SYSTEM_PROMPT = constants.SYSTEM_PROMPT
 
 
 def load_state(path=STATE_PATH):
@@ -80,19 +78,29 @@ def crawl(limit):
 
 def ask(vector_store_id, question, model):
     client = get_client()
-    response = client.responses.create(
-        model=model,
-        instructions=SYSTEM_PROMPT,
-        input=question,
-        max_output_tokens=600,
-        tools=[
-            {
-                "type": "file_search",
-                "vector_store_ids": [vector_store_id],
-            }
-        ],
-    )
-    return response.output_text
+    try:
+        response = client.responses.create(
+            model=model,
+            instructions=SYSTEM_PROMPT,
+            input=question,
+            max_output_tokens=600,
+            tools=[
+                {
+                    "type": "file_search",
+                    "vector_store_ids": [vector_store_id],
+                }
+            ],
+        )
+        return response.output_text
+    except openai.RateLimitError as exc:
+        raise RuntimeError(
+            "OpenAI quota exceeded. Check your plan, billing, or API key limits. "
+            "If you are using a free account, upgrade or wait until quota resets."
+        ) from exc
+    except openai.OpenAIError as exc:
+        raise RuntimeError(f"OpenAI request failed: {exc}") from exc
+    except Exception as exc:
+        raise RuntimeError(f"Unexpected error: {exc}") from exc
 
 
 def parse_args():
@@ -235,7 +243,13 @@ def main():
     print(f"Run log: {LAST_RUN_PATH}")
 
     if args.ask:
-        print(ask(vector_store.id, args.ask, args.model))
+        try:
+            print(ask(vector_store.id, args.ask, args.model))
+        except RuntimeError as exc:
+            print(str(exc))
+            print("Assistant query skipped due to quota or request error.")
+        except Exception as exc:
+            print(f"Assistant query failed: {exc}")
 
 
 if __name__ == "__main__":

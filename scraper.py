@@ -3,12 +3,7 @@ from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-BASE_URL = "https://support.optisigns.com"
-ARTICLES_API_URL = f"{BASE_URL}/api/v2/help_center/en-us/articles.json"
-DEFAULT_TIMEOUT = 20
-HEADERS = {
-    "User-Agent": "OptiSignsDocsBot/1.0 (+https://support.optisigns.com)"
-}
+from bot_mini.constants import ARTICLES_API_URL, BASE_URL, DEFAULT_TIMEOUT, HEADERS
 
 
 def _normalize_url(href):

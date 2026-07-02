@@ -4,7 +4,7 @@ from pathlib import Path
 
 from markdownify import markdownify
 
-DOCS_DIR = Path(__file__).resolve().parent / "docs"
+from bot_mini.constants import DOCS_DIR
 
 
 def html_to_markdown(html):

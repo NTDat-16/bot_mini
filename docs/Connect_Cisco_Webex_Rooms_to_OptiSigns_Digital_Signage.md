@@ -12,14 +12,8 @@ This guide walks a Webex Full Administrator through the one-time setup at the or
 
 * **A Webex account** with the **Full Administrator** role for your organization. Any Webex tier with paired RoomOS devices is supported. (Required to approve OptiSigns in Webex Control Hub — read-only and device-only admins cannot consent.)
 * **An OptiSigns account.** [Sign up for a free trial](https://www.optisigns.com/free-trial) — you only pay for rooms you activate signage on.
-* **At least one WebEngine-capable RoomOS device** paired to your Webex org. Supported models include:
-* Cisco Board Pro / Board Pro G2
-* Cisco Desk Pro / Desk Mini
-* Cisco Codec Pro / Codec EQ
-* Cisco Room Bar Pro
-* Cisco Room Kit EQX
-
-> Older devices (Codec Plus, Room Kit Mini, original Board) do not support WebEngine and cannot run OptiSigns content. [Check WebEngine compatibility on the Cisco support site](https://help.webex.com/article/n7v7gxq).
+* **At least one compatible Cisco Webex device** paired to your Webex org. Digital Signage is supported across current Cisco **Board**, **Desk**, and **Room** Series devices running **RoomOS 11 or later** — for example Board Pro / Board Pro G2, Desk / Desk Mini / Desk Pro, Codec Pro / Codec EQ / Codec Plus, Room Bar / Room Bar Pro, Room Kit / Room Kit Mini / Room Kit EQX, and Room 55 / 70 / 70 G2. The Cisco **SX** and **DX** Series, the **Desk Hub**, and **Webex Share** are not supported. If you're unsure, see Cisco's [Digital signage device list](https://help.webex.com/en-us/article/nmd8log/Enable-digital-signage-on-Board,-Desk,-and-Room-Series-devices).
+* The device must be running in **Cisco RoomOS mode** — not Microsoft Teams Rooms (MTR) mode — so OptiSigns can control it over the RoomOS API.
 
 ---
 
@@ -28,6 +22,23 @@ This guide walks a Webex Full Administrator through the one-time setup at the or
 OptiSigns uses the **Webex Digital Signage / Standby** feature built into RoomOS. We do not install an app on the device — instead, we set the device's signage URL via Webex's official Device Configurations API. Your content plays through the WebEngine browser only when the room is idle, and the device automatically returns to its normal meeting UI on any incoming call, scheduled meeting, or wake-on-presence.
 
 There is no impact on meeting quality, screen-sharing, or Webex Assistant features.
+
+---
+
+## Which Webex devices appear in OptiSigns
+
+OptiSigns shows your Webex **room systems** — the Cisco room devices that drive a meeting space (Room Kit, Room Bar, Board, and Desk models) running Cisco RoomOS. It doesn't list every device in your Webex organization.
+
+These won't appear, by design:
+
+| Not listed | Why |
+| --- | --- |
+| Touch controllers (e.g. Cisco Touch 10) | They're the room's control panel, not a display. |
+| External monitors or TVs attached to a room device | They're outputs of the room system, not separate signage endpoints. |
+| IP phones, headsets, and other accessories | There's no display to show signage on. |
+| Devices running in **Microsoft Teams Rooms (MTR) mode** | The display is managed by Microsoft, so OptiSigns can't control signage on it. A device needs to be in Cisco RoomOS mode to appear here. |
+
+**One room shows as one entry.** A meeting room appears as a single item — its room system. The touch panel and the display in that room are part of the same system, so a room with a codec, a Touch 10, and a monitor shows as **one** OptiSigns room, not three. If you were expecting a separate entry per device, this is why.
 
 ---
 
@@ -41,7 +52,7 @@ Go to [**app.optisigns.com**](https://app.optisigns.com/) and sign in (or create
 
 In the top navigation, open **Devices**. In the left sidebar under **Room Integrations**, click **Webex Rooms**. Since you haven't connected yet, you'll see the **Control Hub OAuth** card with everything you need to get started.
 
-![OptiSigns Devices — Room Integrations — Webex Rooms, the not-connected Control Hub OAuth card](https://support.optisigns.com/hc/article_attachments/52411191588755)
+![OptiSigns Devices — Room Integrations — Webex Rooms, the not-connected Control Hub OAuth card](https://support.optisigns.com/hc/article_attachments/53086251042067)
 
 ---
 
@@ -59,7 +70,7 @@ A new browser tab opens at Cisco Control Hub. Sign in as a **Webex Full Administ
 | `spark:xapi_statuses` | Reads device health signals (online state, peripheral status). |
 | `spark-admin:organizations_read` | Reads org metadata to sanity-check the Org ID you paste. |
 
-![The Connect with Cisco Control Hub OAuth dialog — the four setup steps and all five required scopes](https://support.optisigns.com/hc/article_attachments/52411197221395)
+![The Connect with Cisco Control Hub OAuth dialog — the four setup steps and all five required scopes](https://support.optisigns.com/hc/article_attachments/53086189046803)
 
 > If you see a permission error, you're not signed in as a Full Administrator. Ask your Webex admin to either approve OptiSigns for the org or grant you the Full Administrator role.
 
@@ -71,7 +82,7 @@ Return to the OptiSigns tab. In the **Webex Organization ID** field, paste your 
 
 OptiSigns mints Service App tokens and begins syncing. Within a few seconds the header flips to **Connected**, and your Webex rooms appear in the list alongside any Android, ChromeOS, or Linux signage devices on your account. Use **Sync now** any time to pull the latest inventory.
 
-![Connected: the Webex Rooms list showing the org, rooms synced, and per-room push state](https://support.optisigns.com/hc/article_attachments/52411218876819)
+![Connected: the Webex Rooms list showing the org, rooms synced, and per-room push state](https://support.optisigns.com/hc/article_attachments/53086220405011)
 
 ---
 
@@ -83,7 +94,7 @@ By default, rooms are listed but **not activated**. Activation is per-room billi
 2. Click **Activate Signage License**. The drawer shows how many licenses are available.
 3. Confirm — your subscription updates immediately.
 
-![The room detail drawer with the Activate Signage License button and available license count](https://support.optisigns.com/hc/article_attachments/52411212058003)
+![The room detail drawer with the Activate Signage License button and available license count](https://support.optisigns.com/hc/article_attachments/53086189311507)
 
 ---
 
@@ -91,7 +102,7 @@ By default, rooms are listed but **not activated**. Activation is per-room billi
 
 With the room activated, you can assign content like any other OptiSigns screen. In the room drawer, click **Assign Content** (or **Change Content** if something is already playing), pick an **Asset**, **Playlist**, or **Schedule**, and save. The drawer shows what's currently playing and the room's signage URL.
 
-![The activated room drawer — currently-playing content, Change Content and Remove Signage, and the signage URL](https://support.optisigns.com/hc/article_attachments/52411202243731)
+![The activated room drawer — currently-playing content, Change Content and Remove Signage, and the signage URL](https://support.optisigns.com/hc/article_attachments/53086235851027)
 
 Walk to the device. Within 10–30 seconds, your content appears during Standby. Try a test call — content should clear instantly when the call connects.
 
@@ -110,7 +121,7 @@ In the room drawer, the **Webex Settings** card lets you tune how signage plays 
 
 Click **Save** to apply. Changes reach the device within about 10 seconds via Webex's API.
 
-![The Webex Settings card — Interaction Mode, Auto-refresh, Mute, and Enable](https://support.optisigns.com/hc/article_attachments/52411197957267)
+![The Webex Settings card — Interaction Mode, Auto-refresh, Mute, and Enable](https://support.optisigns.com/hc/article_attachments/53086189585299)
 
 ---
 
@@ -125,6 +136,8 @@ Click **Save** to apply. Changes reach the device within about 10 seconds via We
 ## Troubleshooting
 
 **My rooms don't appear after Verify Connection.** Wait 30 seconds and click **Sync now** — the initial inventory sync can take up to a minute on large orgs. If still empty, confirm you have at least one paired device on a WebEngine-capable model (see "What you'll need" above).
+
+**Some of my Webex devices are missing from the list.** This is usually expected — OptiSigns lists your Webex room systems, not accessories like touch panels, monitors, or phones, and not devices running in Microsoft Teams Rooms mode. See [Which Webex devices appear in OptiSigns](#which-webex-devices-appear-in-optisigns) for the full breakdown.
 
 **Content shows but doesn't clear when a meeting starts.** This usually means Standby is disabled on the device. In Control Hub, open the device → Configurations → search "Standby" → ensure `Standby Control = On`.
 
